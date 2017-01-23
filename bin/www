@@ -5,6 +5,7 @@
  */
 
 var app = require("../app");
+var game = require("../game");
 var debug = require("debug")("emoji-charades:server");
 var http = require("http");
 
@@ -88,3 +89,5 @@ function onListening() {
         : "port " + addr.port;
     debug("Listening on " + bind);
 }
+
+game();
